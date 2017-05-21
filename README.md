@@ -1,2 +1,2 @@
 # voice-listener
-A Angular2 reusable component for voice based input using google APIs
+Component based reusable angularcomponent for voice based input using google APIs
