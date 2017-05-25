@@ -1,11 +1,11 @@
 
-hello {{finalResult}}
 <div class="voice-listner-container">
   <input [(ngModel)]="finalResult" type="text"/>
-  <span class="indicator-container">
+  <span class="indicator-container" (click)="toggleMicOnActivationClick()">
 
       <svg id="microphone"
-       class="microphone-voice-listner active"
+       class="microphone-voice-listner"
+       [ngClass]="getStyleClass()"
        width="25"
        height="25"
        viewBox="0 0 16 16">
@@ -20,8 +20,5 @@ hello {{finalResult}}
 
   </span>
   </div>
-
-  <button (click)="start()">START</button>
-  <button (click)="stop()">STOP</button>
 
 
