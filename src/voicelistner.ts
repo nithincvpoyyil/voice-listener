@@ -1,116 +1,112 @@
 
-import { Component ,NgZone,EventEmitter,Output} from '@angular/core';
+import { Component, NgZone, EventEmitter, Output, Input } from "@angular/core";
 
-export interface IWindow extends Window {
+interface IWindow extends Window {
   webkitSpeechRecognition: any;
 }
 
 @Component({
-  selector: 'voice-listner',
-  styleUrls: ['./style.css'],
-  templateUrl: './template.html'
+  selector: "voice-listner",
+  styleUrls: ["./style.css"],
+  templateUrl: "./template.html"
 })
 export class VoiceListner {
 
   public recognition: any;
 
-  public intermediateResult: string = '';
-  
-  public finalResult: string = '';
+  public intermediateResult: string = "";
 
-  public micStatus:  number = 3;
+  public finalResult: string = "";
 
-  public toggleMic:boolean=false;
+  public micStatus: number = 3;
+
+  public toggleMic: boolean = false;
 
   @Output() onListeningVoice = new EventEmitter();
 
-  constructor(private _ngZone:NgZone) {
+  constructor(private zone: NgZone) {
 
-    if(this.isChrome()&&this.isOnline()&&this.isSupportWebVoiceDetectionApi()){
-      this.micStatus=1;
-    }else{
-      this.micStatus=3;
+    if (this.isChrome() && this.isOnline() && this.isSupportWebVoiceDetectionApi()) {
+      this.micStatus = 1;
+    } else {
+      this.micStatus = 3;
     }
 
-    const {webkitSpeechRecognition}: IWindow = <IWindow>window;
+    const { webkitSpeechRecognition }: IWindow = <IWindow>window;
     this.recognition = new webkitSpeechRecognition();
-    this.recognition.cfinalResultontinuous = true;
+    this.recognition.continuous = true;
     this.recognition.interimResults = true;
     this.recognition.lang = "en-IN";
-    this.finalResult=""
+    this.finalResult = ""
     let self = this;
-    
-    this.recognition.onstart = (event) => {
-    };
 
+    this.recognition.onstart = (event) => { };
     this.recognition.onerror = (event) => { };
-
     this.recognition.onend = (event) => {
-      console.log('@OnEnd.Test',event);
-      _ngZone.run(()=>{
-            this.micStatus=1;
-            this.toggleMic =!this.toggleMic;
-            this.stop();
-            this.onListeningVoice.emit(this.finalResult);
-      });
-    };
-
-    let  handleEvent = (event:any)=>{
-
-      let interimediate_transcript = "";
-      let final_transcript = "";
-      let isFinal = false;
-      let resultScript = ''
-
-      for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) {
-          isFinal = true;
-          final_transcript += event.results[i][0].transcript;
-        } else {
-          isFinal = false;
-          interimediate_transcript += event.results[i][0].transcript;
-        }
-      }
-
-      if (isFinal && final_transcript) {
-        console.info('final_transcript',final_transcript);
-        resultScript = final_transcript;
-      } else if (interimediate_transcript) {
-        console.info('interimediate_transcript',interimediate_transcript);
-        resultScript = interimediate_transcript;
-      };
-      _ngZone.run(()=>{
-          this.finalResult=resultScript;
-      });
-     
-  };
-
-    this.recognition.onresult = (event:any)=>{  
-      handleEvent.call(self,event);
-    };
-  }
-
-  public toggleMicOnActivationClick=()=>{
-
-    console.info('toggle mic',this.toggleMic,'mic status',this.micStatus);
-
-    if(this.toggleMic&&(this.micStatus!==3)){
-
-      this._ngZone.run(()=>{
-        this.micStatus=1;
+      zone.run(() => {
+        this.micStatus = 1;
+        this.toggleMic = !this.toggleMic;
         this.stop();
         this.onListeningVoice.emit(this.finalResult);
       });
-    }else if(!this.toggleMic&&(this.micStatus!==3)){
-      this.micStatus=2;
+    };
+
+    this.recognition.onresult = (event: any) => {
+      this.handleOnListening(event);
+    };
+
+  }
+
+  public handleOnListening(event: any) {
+
+    let interimediate_transcript = "";
+    let final_transcript = "";
+    let isFinal = false;
+    let resultScript = ""
+
+    for (var i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        isFinal = true;
+        final_transcript += event.results[i][0].transcript;
+      } else {
+        isFinal = false;
+        interimediate_transcript += event.results[i][0].transcript;
+      }
+    }
+
+    if (isFinal && final_transcript) {
+      console.info("final_transcript", final_transcript);
+      resultScript = final_transcript;
+    } else if (interimediate_transcript) {
+      console.info("interimediate_transcript", interimediate_transcript);
+      resultScript = interimediate_transcript;
+    };
+    this.zone.run(() => {
+      this.finalResult = resultScript;
+    });
+
+  };
+
+
+  public toggleMicOnActivationClick() {
+
+    if (this.toggleMic && (this.micStatus !== 3)) {
+
+      this.zone.run(() => {
+        this.micStatus = 1;
+        this.stop();
+        // this.onListeningVoice.emit(this.finalResult);
+      });
+    } else if (!this.toggleMic && (this.micStatus !== 3)) {
+      this.micStatus = 2;
       this.start();
     }
 
-    this.toggleMic =!this.toggleMic;
+    this.toggleMic = !this.toggleMic;
   };
 
   public start() {
-    this.finalResult=""
+    this.finalResult = ""
     this.recognition.start();
   }
 
@@ -126,12 +122,12 @@ export class VoiceListner {
     return (!("webkitSpeechRecognition" in window)) ? false : true;
   };
 
- public isSupportWebVoiceDetectionApi = function () {
+  public isSupportWebVoiceDetectionApi = function () {
     return (("speechSynthesis" in window) && ("SpeechSynthesisEvent" in window) &&
       ("SpeechSynthesisUtterance" in window)) ? true : false;
   };
 
-  public isOnline =  () => {
+  public isOnline = () => {
     if (window.navigator && window.navigator.onLine) {
       return true;
     } else {
@@ -139,14 +135,14 @@ export class VoiceListner {
     }
   }
 
-  public getStyleClass =()=>{
+  public getStyleClass = () => {
 
-    if(this.micStatus==1){
-      return 'microphone-voice-listner active';
-    }else if(this.micStatus==2){
-      return 'microphone-voice-listner in-use';
-    }else{
-      return 'microphone-voice-listner disable';
+    if (this.micStatus == 1) {
+      return "microphone-voice-listner active";
+    } else if (this.micStatus == 2) {
+      return "microphone-voice-listner in-use";
+    } else {
+      return "microphone-voice-listner disable";
     }
 
   };
