@@ -1,0 +1,24 @@
+content {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.voice-list-wrapper {
+    padding: 5px;
+    max-height: 400px;
+    overflow: hidden;
+    margin-top: 69px;
+    margin-right: 20px;
+
+    overflow-y: auto;
+    article {
+        padding: 5px;
+        border: 1px solid gray;
+        .item {
+            padding: 5px;
+            margin: 5px;
+            color: #444;
+            background: #FFFFae;
+        }
+    }
+}
