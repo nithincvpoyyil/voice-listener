@@ -12,7 +12,7 @@ This is a voice based input plugin for angular2+ framewrok. It was built for mod
 
 ##### App module
 
-```
+```typescript
 import { NgxVoiceListnerModule } from "@voice/ngx-voicelistner";
 
 @NgModule({
@@ -30,7 +30,7 @@ export class AppModule { }
 ##### Example component
 
 
-```
+```typescript
 @Component({
   selector: 'example-component',
   styleUrls: [],
@@ -58,3 +58,5 @@ export class ExampleComponent {
 
 ## Credits
 `ngx-voiceinput` is based on [ngx-datatable](http://swimlane.github.io/ngx-datatable)'s seed project.
+
+made with :heart: by nithin 
