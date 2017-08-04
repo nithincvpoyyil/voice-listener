@@ -88,7 +88,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".voice-listner-container {\n  width: 260px;\n  height: 36px;\n  position: relative;\n  padding: 0;\n  margin: 0;\n  background: #f5f5f5;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px;\n  color: #444;\n  border: 1px solid rgba(204, 204, 204, 0.17); }\n\n.voice-listner-container input {\n  position: absolute;\n  padding: 0;\n  margin: 0;\n  border: 0;\n  outline: none;\n  transition: all 1s ease-in;\n  width: calc(100% - 35px);\n  height: calc(100% - 10px);\n  background: transparent;\n  color: #0f476b;\n  font-size: 1.8rem;\n  text-overflow: ellipsis;\n  top: 5px;\n  left: 5px; }\n\n.voice-listner-container input:focus {\n  background: #f2f2f2; }\n\n.voice-listner-container .indicator-container {\n  display: inline-block;\n  width: 28px;\n  height: 28px;\n  position: absolute;\n  right: 2px;\n  top: 3px;\n  border-radius: 50%;\n  background: rgba(226, 222, 222, 0.57);\n  padding: 3px;\n  cursor: pointer;\n  border: 2px dotted #dadada; }\n\n.microphone-voice-listner {\n  fill: #999; }\n\n.microphone-voice-listner.active {\n  fill: #091c5a; }\n\n.microphone-voice-listner.in-use {\n  -webkit-animation: microphone .225s ease infinite alternate;\n          animation: microphone .225s ease infinite alternate; }\n\n@-webkit-keyframes microphone {\n  from {\n    fill: #ffcdd2; }\n  to {\n    fill: #ba000d; } }\n\n@keyframes microphone {\n  from {\n    fill: #ffcdd2; }\n  to {\n    fill: #ba000d; } }\n", ""]);
+exports.push([module.i, ".voice-listner-container {\n  width: 260px;\n  height: 36px;\n  position: relative;\n  padding: 0;\n  margin: 0;\n  background: #f5f5f5;\n  border-bottom-right-radius: 20px;\n  border-top-right-radius: 20px;\n  border-top-left-radius: 5px;\n  border-bottom-left-radius: 5px;\n  color: #444;\n  border: 1px solid rgba(204, 204, 204, 0.37); }\n\n.voice-listner-container input {\n  position: absolute;\n  padding: 0;\n  margin: 0;\n  border: 0;\n  outline: none;\n  transition: all 1s ease-in;\n  width: calc(100% - 35px);\n  height: calc(100% - 10px);\n  background: transparent;\n  color: #0f476b;\n  font-size: 1.2rem;\n  text-overflow: ellipsis;\n  top: 5px;\n  left: 5px; }\n\n.voice-listner-container input:focus {\n  background: #f2f2f2; }\n\n.voice-listner-container .indicator-container {\n  display: inline-block;\n  width: 22px;\n  height: 22px;\n  position: absolute;\n  right: 2px;\n  top: 2px;\n  border-radius: 50%;\n  background: rgba(226, 222, 222, 0.57);\n  padding: 3px;\n  cursor: pointer;\n  border: 2px dotted #c5c5c5; }\n\n.microphone-voice-listner {\n  fill: #999; }\n\n.microphone-voice-listner.active {\n  fill: #091c5a; }\n\n.microphone-voice-listner.in-use {\n  -webkit-animation: microphone .225s ease infinite alternate;\n          animation: microphone .225s ease infinite alternate; }\n\n@-webkit-keyframes microphone {\n  from {\n    fill: #ffcdd2; }\n  to {\n    fill: #ba000d; } }\n\n@keyframes microphone {\n  from {\n    fill: #ffcdd2; }\n  to {\n    fill: #ba000d; } }\n", ""]);
 
 // exports
 
@@ -1403,6 +1403,7 @@ var VoiceListnerInput = (function () {
         this.toggleMic = false;
         this.isAPIAvailableFlag = true;
         this.onListeningVoice = new core_1.EventEmitter();
+        this.lang = "en-IN";
         this.isChrome = function () {
             return /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
         };
@@ -1444,7 +1445,7 @@ var VoiceListnerInput = (function () {
             this.recognition = new webkitSpeechRecognition();
             this.recognition.continuous = true;
             this.recognition.interimResults = true;
-            this.recognition.lang = 'en-IN';
+            this.recognition.lang = this.lang;
             this.finalResult = '';
             this.recognition.onstart = function (event) { };
             this.recognition.onerror = function (event) { };
@@ -1515,6 +1516,10 @@ var VoiceListnerInput = (function () {
         core_1.Output(),
         __metadata("design:type", Object)
     ], VoiceListnerInput.prototype, "onListeningVoice", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], VoiceListnerInput.prototype, "lang", void 0);
     VoiceListnerInput = __decorate([
         core_1.Component({
             selector: 'voice-listner-input,[voiceListnerInput]',

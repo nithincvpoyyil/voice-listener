@@ -8,6 +8,7 @@ export declare class VoiceListnerInput {
     toggleMic: boolean;
     isAPIAvailableFlag: boolean;
     onListeningVoice: EventEmitter<{}>;
+    lang: string;
     constructor(zone: NgZone);
     handleOnListening(event: any): void;
     toggleMicOnActivationClick(): void;

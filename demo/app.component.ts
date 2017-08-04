@@ -26,15 +26,12 @@ import { Location, LocationStrategy, HashLocationStrategy } from '@angular/commo
               <li>
                 <a href="#" target="_black">Online</a>
               </li>
-              <li>
-                <a href="#" target="_black">PDF</a>
-              </li>
             </ul>
           </li>
         </ul>
       </nav>
       <content>
-        <voice-listner-input (onListeningVoice)="getTheSearchString($event)" ></voice-listner-input>
+        <voice-listner-input [lang]='en-US' (onListeningVoice)="getTheSearchString($event)" ></voice-listner-input>
         <div class="voice-list-wrapper" id="list-1">
         <label for="list-1"> word list </label>
           <article >

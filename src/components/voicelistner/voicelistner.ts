@@ -45,6 +45,7 @@ export class VoiceListnerInput {
   public isAPIAvailableFlag = true;
 
   @Output() onListeningVoice = new EventEmitter();
+  @Input() lang: string = "en-IN";
 
   constructor(private zone: NgZone) {
 
@@ -59,7 +60,7 @@ export class VoiceListnerInput {
       this.recognition = new webkitSpeechRecognition();
       this.recognition.continuous = true;
       this.recognition.interimResults = true;
-      this.recognition.lang = 'en-IN';
+      this.recognition.lang = this.lang;
       this.finalResult = '';
 
       this.recognition.onstart = (event: any) => { };
@@ -135,15 +136,15 @@ export class VoiceListnerInput {
     this.recognition.abort();
   }
 
-  public isChrome =  () => {
+  public isChrome = () => {
     return /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
   }
 
-  public isSupportWebSpeechApi =  () => {
+  public isSupportWebSpeechApi = () => {
     return (!('webkitSpeechRecognition' in window)) ? false : true;
   }
 
-  public isSupportWebVoiceDetectionApi =  () => {
+  public isSupportWebVoiceDetectionApi = () => {
     return (('speechSynthesis' in window) && ('SpeechSynthesisEvent' in window) &&
       ('SpeechSynthesisUtterance' in window)) ? true : false;
   }

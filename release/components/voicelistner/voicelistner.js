@@ -11,6 +11,7 @@ var VoiceListnerInput = (function () {
         this.toggleMic = false;
         this.isAPIAvailableFlag = true;
         this.onListeningVoice = new core_1.EventEmitter();
+        this.lang = "en-IN";
         this.isChrome = function () {
             return /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
         };
@@ -52,7 +53,7 @@ var VoiceListnerInput = (function () {
             this.recognition = new webkitSpeechRecognition();
             this.recognition.continuous = true;
             this.recognition.interimResults = true;
-            this.recognition.lang = 'en-IN';
+            this.recognition.lang = this.lang;
             this.finalResult = '';
             this.recognition.onstart = function (event) { };
             this.recognition.onerror = function (event) { };
@@ -132,6 +133,7 @@ var VoiceListnerInput = (function () {
     ]; };
     VoiceListnerInput.propDecorators = {
         'onListeningVoice': [{ type: core_1.Output },],
+        'lang': [{ type: core_1.Input },],
     };
     return VoiceListnerInput;
 }());
