@@ -6,4 +6,4 @@ This is a voice based input plugin for angular2+ framewrok. It was built for mod
 
 
 ## Credits
-`ngx-voiceinput` is used [angular-datatable](http://swimlane.github.io/ngx-datatable)'s open-source seed project;
+`ngx-voiceinput` is based on [ngx-datatable](http://swimlane.github.io/ngx-datatable)'s seed project.
