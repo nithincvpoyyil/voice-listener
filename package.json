@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "https://github.com/nithincvpoyyil/voice-listener.git"
   },
   "keywords": [
     "angularjs",
@@ -48,12 +48,12 @@
     "input",
     "voice listner"
   ],
-  "author": "",
+  "author": "nithincvpoyyil",
   "license": "MIT",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/nithincvpoyyil/voice-listener/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/nithincvpoyyil/voice-listener",
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
