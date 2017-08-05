@@ -1,6 +1,6 @@
 /**
- * angular2-data-table v"0.0.1" (https://github.com/swimlane/angular2-data-table)
- * Copyright 2016
+ * @ngxvoice/ngx-voicelistner v"1.0.0" (https://github.com/nithincvpoyyil/voice-listener)
+ * Copyright 2017
  * Licensed under MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {

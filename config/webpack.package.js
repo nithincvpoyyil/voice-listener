@@ -9,8 +9,8 @@ const { CheckerPlugin } = require('awesome-typescript-loader');
 
 const banner =
 `/**
- * angular2-data-table v${APP_VERSION} (https://github.com/swimlane/angular2-data-table)
- * Copyright 2016
+ * @ngxvoice/ngx-voicelistner v${APP_VERSION} (https://github.com/nithincvpoyyil/voice-listener)
+ * Copyright 2017
  * Licensed under MIT
  */`;
 

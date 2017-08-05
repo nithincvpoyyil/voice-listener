@@ -4,6 +4,7 @@ This is a voice based input plugin for angular2+ framewrok. It was built for mod
 
 ### Installation
 
+`npm install @ngxvoice/ngx-voicelistner` or `yarn add @voice/ngx-voicelistner`
 
 
 ### Usage
