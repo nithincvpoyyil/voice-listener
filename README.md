@@ -10,11 +10,10 @@ This is a voice based input plugin for angular2+ framewrok. It was built for mod
 ### Usage
 
 
-
 ##### App module
 
 ```typescript
-import { NgxVoiceListnerModule } from "@voice/ngx-voicelistner";
+import { NgxVoiceListnerModule } from "@ngxvoice/ngx-voicelistner";
 
 @NgModule({
   declarations: [
@@ -56,8 +55,17 @@ export class ExampleComponent {
 
 ```
 
+##### Configuration for language
+
+This library is using 'en-IN' as language config by default, you can chnage this is by adding `lang` input parameter as shown in the example below. For more information, please refer Web Speech API link in the above description.
+
+#### Known issues: If you are facing installtion issues (Error code : EBADPLATFORM or fsevent related issues) [downgrade the npm](https://github.com/npm/npm/issues/8899) to 3.1.0 and try.
+
+```shellscript
+npm install -g npm@3.1.0
+``` 
 
 ## Credits
 `ngx-voiceinput` is based on [ngx-datatable](http://swimlane.github.io/ngx-datatable)'s seed project.
 
-made with :heart: by nithin 
+made with :heart:
