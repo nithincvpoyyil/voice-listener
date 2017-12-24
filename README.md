@@ -2,9 +2,11 @@
 
 This is a voice based input plugin for angular2+ framewrok. It was built for modern browsers using TypeScript, CSS3 and HTML5 and Angular >=4.0.0, and Google Chrome is the only browser which supports [web speech API](https://developers.google.com/web/updates/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API).
 
+### DEMO : https://nithincvpoyyil.github.io/voicelistner/home
+
 ### Installation
 
-`npm install @ngxvoice/ngx-voicelistner` or `yarn add @voice/ngx-voicelistner`
+`npm install @ngxvoice/ngx-voicelistner` or `yarn add @ngxvoice/ngx-voicelistner`
 
 
 ### Usage
