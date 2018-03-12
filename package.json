@@ -459,7 +459,7 @@
     "http-errors": "^1.6.1",
     "har-validator": "^4.2.1",
     "html-comment-regex": "^1.1.1",
-    "http-proxy-middleware": "^0.17.4",
+    "http-proxy-middleware": "^0.18.0",
     "https-browserify": "^0.0.1",
     "http-signature": "^1.1.1",
     "https-proxy-agent": "^1.0.0",
