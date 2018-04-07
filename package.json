@@ -952,7 +952,7 @@
     "webdriver-manager": "^12.0.6",
     "webpack-combine-loaders": "^2.0.3",
     "webpack-dev-middleware": "^1.11.0",
-    "webpack-dev-server": "^2.5.1",
+    "webpack-dev-server": "^3.1.2",
     "use": "^2.0.2",
     "typescript": "^2.4.1",
     "websocket-driver": "^0.6.5",
