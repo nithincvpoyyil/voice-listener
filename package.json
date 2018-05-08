@@ -786,7 +786,7 @@
     "renderkid": "^2.0.1",
     "repeat-element": "^1.1.2",
     "redent": "^1.0.0",
-    "replace": "^0.3.0",
+    "replace": "^1.0.0",
     "replace-ext": "^0.0.1",
     "request": "^2.81.0",
     "require-from-string": "^1.2.1",
