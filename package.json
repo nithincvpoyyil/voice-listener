@@ -540,7 +540,7 @@
     "jsonfile": "^2.4.0",
     "jsonify": "^0.0.0",
     "jsprim": "^1.4.0",
-    "karma": "^1.7.0",
+    "karma": "^2.0.3",
     "karma-chrome-launcher": "^2.2.0",
     "istanbul-instrumenter-loader": "^2.0.0",
     "json-stringify-safe": "^5.0.1",
