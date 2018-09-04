@@ -947,7 +947,7 @@
     "watchpack": "^1.4.0",
     "wbuf": "^1.7.2",
     "weak-map": "^1.0.0",
-    "webpack": "^3.3.0",
+    "webpack": "^4.0.0",
     "webdriver-js-extender": "^1.0.0",
     "webdriver-manager": "^12.0.6",
     "webpack-combine-loaders": "^2.0.3",
