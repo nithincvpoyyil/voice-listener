@@ -224,7 +224,7 @@
     "builtin-status-codes": "^3.0.0",
     "boolbase": "^1.0.0",
     "browserify-sign": "^4.0.4",
-    "cache-base": "^0.8.5",
+    "cache-base": "^1.0.1",
     "bytes": "^2.4.0",
     "browserify-des": "^1.0.0",
     "browserify-zlib": "^0.1.4",
