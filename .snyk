@@ -1,0 +1,104 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - karma-webpack > async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - webpack-merge > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - node-sass > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - sass-graph > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - awesome-typescript-loader > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - karma-webpack > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - karma-coverage > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - http-proxy-middleware > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - html-webpack-plugin > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - globule > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - combine-lists > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-template > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-generator > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - xmlbuilder > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-generator > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-generator > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - extract-text-webpack-plugin > async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-template > babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - source-map-loader > async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-template > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - node-sass > sass-graph > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - karma > combine-lists > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - gaze > globule > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - gh-pages > async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - webpack > async > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-template > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-template > babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - babel-template > babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-template > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - node-sass > gaze > globule > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-generator > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-template > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-generator > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-generator > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-lib-instrument > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-template > babel-traverse > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-template > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
+    - istanbul-instrumenter-loader > istanbul-lib-instrument > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2019-07-03T22:15:05.007Z'
