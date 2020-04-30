@@ -33,7 +33,9 @@
     "package:replace-scss": "node ./config/replace-scss.js",
     "package:css": "node-sass -o release/ src/themes && node-sass -o release/components src/components",
     "package:minify": "uglifyjs release/index.js --source-map --compress --mangle --screw-ie8 --output release/index.min.js",
-    "deploy": "node ./config/deploy.js"
+    "deploy": "node ./config/deploy.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -982,6 +984,8 @@
     "xmlhttprequest-ssl": "^1.5.3",
     "yn": "^2.0.0",
     "yeast": "^0.1.2",
-    "zone.js": "^0.8.13"
-  }
+    "zone.js": "^0.8.13",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
