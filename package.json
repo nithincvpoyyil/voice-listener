@@ -139,7 +139,7 @@
     "abbrev": "^1.0.9",
     "acorn-dynamic-import": "^2.0.2",
     "acorn": "^5.1.1",
-    "adm-zip": "^0.4.7",
+    "adm-zip": "^0.5.2",
     "agent-base": "^2.1.1",
     "accepts": "^1.3.3",
     "after": "^0.8.2",
