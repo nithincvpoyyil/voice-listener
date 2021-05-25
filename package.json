@@ -622,7 +622,7 @@
     "lodash._basetostring": "^3.0.1",
     "mkdirp": "^0.5.1",
     "ms": "^0.7.2",
-    "multicast-dns": "^6.1.1",
+    "multicast-dns": "^7.2.3",
     "minimist": "^1.2.0",
     "multicast-dns-service-types": "^1.1.0",
     "multipipe": "^0.1.2",
