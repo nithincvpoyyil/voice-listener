@@ -371,7 +371,7 @@
     "eventemitter3": "^1.2.0",
     "event-stream": "^3.3.4",
     "events": "^1.1.1",
-    "eventsource": "^0.1.6",
+    "eventsource": "^2.0.2",
     "evp_bytestokey": "^1.0.0",
     "exit": "^0.1.2",
     "expand-braces": "^0.1.2",
